@@ -335,14 +335,6 @@ class PagerFragment : MainFragment(), PagerAdapter.OnItemClickListener, PagerAda
             MaterialAlertDialogBuilder(activity).setMessage(R.string.msg_guide)
                 .setPositiveButton(android.R.string.ok, null).show()
             return
-        } else if (HailData.workingMode == HailData.MODE_SHIZUKU_HIDE) {
-            runCatching { HShizuku.isRoot }.onSuccess {
-                if (!it) {
-                    MaterialAlertDialogBuilder(activity).setMessage(R.string.shizuku_hide_adb)
-                        .setPositiveButton(android.R.string.ok, null).show()
-                    return
-                }
-            }
         }
         val filtered = list.filter { AppManager.isAppFrozen(it.packageName) != frozen }
         when (val result = AppManager.setListFrozen(frozen, *filtered.toTypedArray())) {

@@ -29,11 +29,6 @@ object HailData {
     const val MODE_DEFAULT = "default"
 
     const val OWNER = "owner_"
-    const val DHIZUKU = "dhizuku_"
-    const val SU = "su_"
-    const val SHIZUKU = "shizuku_"
-    const val ISLAND = "island_"
-    const val PRIVAPP = "privapp_"
 
     const val STOP = "stop"
     const val DISABLE = "disable"
@@ -42,20 +37,6 @@ object HailData {
 
     const val MODE_OWNER_HIDE = OWNER + HIDE
     const val MODE_OWNER_SUSPEND = OWNER + SUSPEND
-    const val MODE_DHIZUKU_HIDE = DHIZUKU + HIDE
-    const val MODE_DHIZUKU_SUSPEND = DHIZUKU + SUSPEND
-    const val MODE_SU_STOP = SU + STOP
-    const val MODE_SU_DISABLE = SU + DISABLE
-    const val MODE_SU_HIDE = SU + HIDE
-    const val MODE_SU_SUSPEND = SU + SUSPEND
-    const val MODE_SHIZUKU_STOP = SHIZUKU + STOP
-    const val MODE_SHIZUKU_DISABLE = SHIZUKU + DISABLE
-    const val MODE_SHIZUKU_HIDE = SHIZUKU + HIDE
-    const val MODE_SHIZUKU_SUSPEND = SHIZUKU + SUSPEND
-    const val MODE_ISLAND_HIDE = ISLAND + HIDE
-    const val MODE_ISLAND_SUSPEND = ISLAND + SUSPEND
-    const val MODE_PRIVAPP_STOP = PRIVAPP + STOP
-    const val MODE_PRIVAPP_DISABLE = PRIVAPP + DISABLE
 
     private const val TILE_ACTION = "tile_action"
     private const val HOME_FONT_SIZE = "home_font_size"

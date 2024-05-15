@@ -33,8 +33,10 @@ android {
     buildTypes {
         debug {
             applicationIdSuffix = ".debug"
+            versionNameSuffix = "_dw"
         }
         release {
+            versionNameSuffix = "_dw"
             isMinifyEnabled = true
             isShrinkResources = true
             signingConfig = signing
@@ -84,11 +86,7 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     implementation("dev.chrisbanes.insetter:insetter:0.6.1")
     implementation("dev.rikka.rikkax.preference:simplemenu-preference:1.0.3")
-    implementation("dev.rikka.shizuku:api:13.1.5")
-    implementation("dev.rikka.shizuku:provider:13.1.5")
-    implementation("io.github.iamr0s:Dhizuku-API:2.4")
     implementation("me.zhanghai.android.appiconloader:appiconloader:1.5.0")
     implementation("org.apache.commons:commons-text:1.11.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
-    implementation("org.lsposed.hiddenapibypass:hiddenapibypass:4.3")
 }

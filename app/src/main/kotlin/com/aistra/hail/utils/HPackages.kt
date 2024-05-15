@@ -1,11 +1,8 @@
 package com.aistra.hail.utils
 
-import android.app.ActivityManager
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
-import androidx.core.content.getSystemService
 import com.aistra.hail.HailApp.Companion.app
-import org.lsposed.hiddenapibypass.HiddenApiBypass
 
 object HPackages {
     val myUserId get() = android.os.Process.myUserHandle().hashCode()
@@ -62,7 +59,7 @@ object HPackages {
     fun canUninstallNormally(packageName: String): Boolean =
         getApplicationInfoOrNull(packageName)?.sourceDir?.startsWith("/data") ?: false
 
-    fun forceStopApp(packageName: String): Boolean = runCatching {
+    /*fun forceStopApp(packageName: String): Boolean = runCatching {
         app.getSystemService<ActivityManager>()!!.let {
             if (HTarget.P) HiddenApiBypass.invoke(it::class.java, it, "forceStopPackage", packageName)
             else it::class.java.getMethod("forceStopPackage", String::class.java).invoke(it, packageName)
@@ -71,9 +68,9 @@ object HPackages {
     }.getOrElse {
         HLog.e(it)
         false
-    }
+    }*/
 
-    fun setAppDisabled(packageName: String, disabled: Boolean): Boolean {
+    /*fun setAppDisabled(packageName: String, disabled: Boolean): Boolean {
         getApplicationInfoOrNull(packageName) ?: return false
         if (disabled) forceStopApp(packageName)
         runCatching {
@@ -86,5 +83,5 @@ object HPackages {
             HLog.e(it)
         }
         return isAppDisabled(packageName) == disabled
-    }
+    }*/
 }
